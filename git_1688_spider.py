@@ -30,7 +30,7 @@ class Albb:
         self.time1 = str(int(time.time() * 1000))
 
     def execjs_run(self):  # 需要的参数我直接保存在初始化里了，所以调用execjs_run就不用传入参数了
-        with open("albb.js", "r", encoding="utf-8") as f:
+        with open("albb_sign.js", "r", encoding="utf-8") as f:
             js_content = f.read()
             context = execjs.compile(js_content)
             ret = context.call("h", self.e)
